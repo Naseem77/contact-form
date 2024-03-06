@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Accessibe HomeWork</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"
+        ><img src="assets/logo.png" alt="accessibe logo"
+      /></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+    <section class="home-container" id="home">
+      <form action="" id="contactForm">
+        <h1>Contact Form</h1>
+        <div class="row">
+          <div class="column half">
+            <label for="firstName">First Name *</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              oninvalid="this.setCustomValidity('Please enter your first name')"
+              oninput="this.setCustomValidity('')"
+            />
+          </div>
+          <div class="column half">
+            <label for="lastName">Last Name *</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              oninvalid="this.setCustomValidity('Please enter your last name')"
+              oninput="this.setCustomValidity('')"
+            />
+          </div>
+          <div class="column">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              oninvalid="this.setCustomValidity('Please enter your email')"
+              oninput="this.setCustomValidity('')"
+            />
+          </div>
+          <div class="column">
+            <label for="address">Address *</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+              oninvalid="this.setCustomValidity('Please enter your address')"
+              oninput="this.setCustomValidity('')"
+            />
+          </div>
+          <div class="column">
+            <label for="country">Country *</label>
+            <select
+              id="country"
+              name="country"
+              required
+              oninvalid="this.setCustomValidity('Please choose a country')"
+              oninput="this.setCustomValidity('')"
+            >
+              <optgroup>
+                <option selected value="">Choose country</option>
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="il">Israel</option>
+                <option value="il">Brazil</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="column">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" maxlength="150"></textarea>
+          </div>
+          <fieldset class="contact-selection">
+            <legend>I want to receive:</legend>
+            <label for="receiveEmails"
+              ><input
+                type="checkbox"
+                id="receiveEmails"
+                name="receive"
+                value="Email"
+              />
+              Emails</label
+            >
+            <label for="receiveSMS"
+              ><input
+                type="checkbox"
+                id="receiveSMS"
+                name="receive"
+                value="SMS"
+              />
+              SMS</label
+            >
+            <label for="receiveCalls"
+              ><input
+                type="checkbox"
+                id="receiveCalls"
+                name="receive"
+                value="Phone Calls"
+              />
+              Phone Calls</label
+            >
+          </fieldset>
+          <div class="column">
+            <button id="submitBtn" type="submit" value="SUBMIT">Submit</button>
+          </div>
+          <div id="successMessage">
+            <h3>
+              <i class="bx bx-message-square-check"></i> Contact form submitted
+              successfully!
+            </h3>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="contact" id="contact">
+      <ul class="social">
+        <li>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="bx bxl-facebook"></i
+            ><span class="sr-only">Facebook new window</span></a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="bx bxl-instagram"></i
+            ><span class="sr-only">Facebook new window</span></a
+          >
+        </li>
+        <li>
+          <a href="https://twitter.com/" target="_blank">
+            <i class="bx bxl-twitter"></i>
+            <span class="sr-only">Facebook new window</span></a
+          >
+        </li>
+      </ul>
+      <ul class="links">
+        <li>Privacy Policy</li>
+        <li>Terms of Use</li>
+        <li>Our Company</li>
+      </ul>
+      <p id="rights">&#169; All Right Reserved.</p>
+    </section>
+  </body>
+  <script src="main.js"></script>
+</html>
